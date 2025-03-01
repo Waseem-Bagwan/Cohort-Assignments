@@ -1,14 +1,14 @@
 // this is setTimeout callback hell 
 
-// setTimeout(function() {
-//     console.log(`hi after 1 sec from callback hell`)
-//     setTimeout(function() {
-//         console.log(`hi after 2 sec from callback hell`)
-//         setTimeout(function() {
-//             console.log(`hi after 3 sec from callback hell`)
-//         },3000)
-//     },2000)
-// },1000)
+setTimeout(function() {
+    console.log(`hi after 1 sec from callback hell`)
+    setTimeout(function() {
+        console.log(`hi after 2 sec from callback hell`)
+        setTimeout(function() {
+            console.log(`hi after 3 sec from callback hell`)
+        },3000)
+    },2000)
+},1000)
 
 // this get rid of this we can different approach this isn't callback hell 
 
@@ -26,7 +26,7 @@ function taskOne(){
     setTimeout(taskTwo,2000)
 }
 
-// setTimeout(taskOne,1000)
+setTimeout(taskOne,1000)
 
 // this is Promisified setTimeout approach 
 
